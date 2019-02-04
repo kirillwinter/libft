@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 23:05:47 by wballaba          #+#    #+#             */
-/*   Updated: 2018/11/27 23:05:48 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:18:07 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Функция переводит число в строку
+*/
 
 static char	*ft_negativ(char *arr, long n, int len)
 {

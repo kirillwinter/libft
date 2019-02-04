@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 22:57:03 by wballaba          #+#    #+#             */
-/*   Updated: 2018/11/26 22:57:05 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:34:42 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Печатает строку
+*/
 
 void	ft_putstr(char const *s)
 {

@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 20:01:48 by wballaba          #+#    #+#             */
-/*   Updated: 2018/11/26 20:01:51 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:14:49 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Функция atoi преобразует строку string в целое значение типа int
+*/
 
 static int	ft_spaces(const char *str)
 {

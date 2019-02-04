@@ -3,28 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 15:40:53 by wballaba          #+#    #+#             */
-/*   Updated: 2018/12/08 15:40:54 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 21:52:47 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Функция strpbrk() возвращает указатель на первый символ в строке, на которую
+** указывает str1, совпадающий с каким-нибудь из символов строки, на которую
+** указывает str2. Нулевые символы в конце строк в рассмотрение не включаются.
+** Если совпадений нет, возвращается NULL.
+*/
+
 char	*ft_strpbrk(const char *s, const char *accept)
 {
-	size_t	lenaccept;
-	size_t	i;
-
-	lenaccept = ft_strlen((char*)accept);
-	i = 0;
 	if (s == NULL || accept == NULL)
 		return (NULL);
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		if (ft_memchr(accept, s[i], lenaccept) != NULL)
-			return ((char*)s + i);
+		if (ft_strchr(accept, *s) != NULL)
+			return ((char*)s);
+		s++;
 	}
 	return (NULL);
 }

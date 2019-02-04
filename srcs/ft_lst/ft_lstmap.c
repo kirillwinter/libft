@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 17:56:06 by wballaba          #+#    #+#             */
-/*   Updated: 2018/12/07 17:56:08 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 19:58:35 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Применяет функцию f к каждому элементу списка
+*/
 
 static void	del(void *content, size_t content_size)
 {

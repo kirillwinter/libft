@@ -6,11 +6,15 @@
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 18:24:11 by wballaba          #+#    #+#             */
-/*   Updated: 2019/02/04 18:24:14 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 19:59:34 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Создает новый список
+*/
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {

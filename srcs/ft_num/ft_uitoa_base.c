@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwillem- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/10 20:48:37 by jwillem-          #+#    #+#             */
-/*   Updated: 2019/01/10 20:48:39 by jwillem-         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:25:12 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/*
+** Функция переводит положительное число в строку
+** в зависимости от системы исчесления
+*/
 
 static size_t	ft_unsllonglen(unsigned long long num, int base)
 {

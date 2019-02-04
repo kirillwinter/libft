@@ -6,11 +6,15 @@
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 19:12:00 by wballaba          #+#    #+#             */
-/*   Updated: 2019/02/04 19:12:04 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:29:49 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Записывает символ в файл
+*/
 
 void	ft_putchar_fd(char c, int fd)
 {

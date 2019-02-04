@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 14:16:43 by wballaba          #+#    #+#             */
-/*   Updated: 2018/11/27 14:16:44 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:33:59 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Выводит int в файл
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 14:15:48 by wballaba          #+#    #+#             */
-/*   Updated: 2018/11/27 14:15:49 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:33:03 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Выводит строку и в конце разрыв строки в файл
+*/
 
 void	ft_putendl_fd(char const *s, int fd)
 {

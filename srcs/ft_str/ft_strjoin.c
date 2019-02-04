@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wballaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 20:44:20 by wballaba          #+#    #+#             */
-/*   Updated: 2018/11/27 20:44:21 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:59:36 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** функция соединяет s1 и s2 в новую строку
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

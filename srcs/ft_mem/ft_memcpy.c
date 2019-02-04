@@ -6,11 +6,15 @@
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 18:23:47 by wballaba          #+#    #+#             */
-/*   Updated: 2019/02/04 18:18:48 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:06:35 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** копирует области памяти
+*/
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

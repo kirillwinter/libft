@@ -6,11 +6,15 @@
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 18:21:27 by wballaba          #+#    #+#             */
-/*   Updated: 2019/02/04 18:21:34 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/04 20:07:26 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** заполняет область памяти
+*/
 
 void	*ft_memset(void *b, int c, size_t len)
 {
