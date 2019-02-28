@@ -6,7 +6,7 @@
 #    By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/15 17:32:16 by wballaba          #+#    #+#              #
-#    Updated: 2019/02/04 19:37:21 by wballaba         ###   ########.fr        #
+#    Updated: 2019/02/28 17:45:29 by wballaba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ MEM :=	ft_bzero		ft_memalloc		ft_memcpy		ft_memccpy		ft_memchr \
 
 NUMDIR := ft_num/
 NUM :=	ft_atoi			ft_intlen		ft_uitoa_base	ft_range		ft_itoa_base \
-		ft_power		ft_itoa			ft_sqrt
+		ft_power		ft_itoa			ft_sqrt			ft_swap			ft_intmaxabs
 
 PFDIR := ft_printf/
 PF :=   create_struct	find_specifier	ft_printf		get_value		handling_specifier \
@@ -43,6 +43,11 @@ STR :=	ft_isalnum		ft_isalpha		ft_isascii		ft_isdigit		ft_isprint	\
 		ft_strncat		ft_strncmp		ft_strncpy		ft_strnequ		ft_strnew \
 		ft_strnstr		ft_strpbrk		ft_strrchr		ft_strsplit		ft_strstr \
 		ft_strsub		ft_strtoupper	ft_strtrim		ft_tolower		ft_toupper \
+		ft_strcount
+
+TREEDIR := ft_tree/
+TREE :=  ft_insert ft_extractmax
+
 
 COMPILE := gcc -Wall -Wextra -Werror -g
 OBJDIR := obj/
@@ -56,6 +61,7 @@ FILES += $(addprefix $(MEMDIR),$(MEM))
 FILES += $(addprefix $(NUMDIR),$(NUM))
 FILES += $(addprefix $(PFDIR),$(PF))
 FILES += $(addprefix $(STRDIR),$(STR))
+FILES += $(addprefix $(TREEDIR),$(TREE))
 
 SRC := $(addprefix $(SRCDIR),$(addsuffix .c,$(FILES)))
 OBJ := $(addprefix $(OBJDIR),$(addsuffix .o,$(FILES)))
@@ -71,6 +77,7 @@ $(OBJDIR):
 	@mkdir $(OBJDIR)$(NUMDIR)
 	@mkdir $(OBJDIR)$(PFDIR)
 	@mkdir $(OBJDIR)$(STRDIR)
+	@mkdir $(OBJDIR)$(TREEDIR)
 	@echo "OK!"
 
 $(OBJDIR)%.o: $(SRCDIR)%.c | $(OBJDIR)
@@ -98,5 +105,5 @@ re: fclean
 
 test: all
 	@echo "Compiling test..."
-	@$(COMPILE) -w -I$(INCDIR) -L. -lftprintf main.c -o test
+	@$(COMPILE) -w -I$(INCDIR) -L. -lft main.c -o test
 	@echo "OK!"

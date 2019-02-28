@@ -6,7 +6,7 @@
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 19:08:46 by jwillem-          #+#    #+#             */
-/*   Updated: 2019/02/04 19:38:35 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/02/28 17:51:57 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # define MAX_FD 4096
 
 # define ABS(n)	(n < 0 ? -n : n)
+# define MAX(a, b)	(a > b ? a : b)
+# define MIN(a, b)	(a < b ? a : b)
 
 typedef struct	s_list
 {
@@ -64,11 +66,13 @@ void			*ft_memset(void *b, int c, size_t len);
 */
 int				ft_atoi(const char *str);
 int				ft_intlen(long n);
+int				ft_intmaxabs(int *arr, size_t size);
 char			*ft_itoa_base(long long num, int base);
 char			*ft_itoa(int nb);
 double			ft_power(double num, int power);
 int				*ft_range(int min, int max);
 int				ft_sqrt(int nb);
+void			ft_swap(int *a, int *b);
 char			*ft_uitoa_base(unsigned long long num, int base);
 /*
 ** ft_printf
@@ -95,6 +99,7 @@ char			*ft_strcat(char *destination, const char *append);
 char			*ft_strchr(const char *str, int c);
 void			ft_strclr(char *s);
 int				ft_strcmp(const char *s1, const char *s2);
+size_t			ft_strcount(const char **s);
 char			*ft_strcpy(char *destination, const char *source);
 void			ft_strdel(char **as);
 char			*ft_strdup(const char *s1);
@@ -122,5 +127,11 @@ char			*ft_str_toupper(char *str);
 char			*ft_strtrim(char const *s);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+
+/*
+** ft_tree
+*/
+void			ft_isert(int *tree, int size, int val);
+int				ft_extractmax(int *tree, int *size);
 
 #endif
