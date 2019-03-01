@@ -6,7 +6,7 @@
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 19:08:46 by jwillem-          #+#    #+#             */
-/*   Updated: 2019/02/28 17:51:57 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/03/01 20:50:00 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,19 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct 	s_pqueue_node
+{
+	int		priority;
+	void	*content;
+}				t_pqueue_node;
+
+typedef struct	s_pqueue
+{
+	t_pqueue_node	*nodes;
+	size_t			length;
+	size_t			size;
+}				t_pqueue;
 
 /*
 ** ft_file
@@ -131,7 +144,11 @@ int				ft_toupper(int c);
 /*
 ** ft_tree
 */
-void			ft_isert(int *tree, int size, int val);
-int				ft_extractmax(int *tree, int *size);
+void			ft_ascent(t_pqueue	*pqueue, size_t pos);
+void			ft_drowning(t_pqueue *pqueue, size_t pos);
+void			*ft_extractmax(t_pqueue	*pqueue);
+int				ft_insert(t_pqueue	*pqueue, void *content, int priority);
+t_pqueue		*ft_pqueue_init(size_t length);
+void			ft_swap_ptr(void **a, void **b);
 
 #endif

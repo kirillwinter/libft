@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_insert.c                                        :+:      :+:    :+:   */
+/*   ft_pqueue_init.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/28 15:41:31 by wballaba          #+#    #+#             */
-/*   Updated: 2019/03/01 21:00:44 by wballaba         ###   ########.fr       */
+/*   Created: 2019/03/01 19:03:28 by wballaba          #+#    #+#             */
+/*   Updated: 2019/03/01 21:00:15 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** функция добавляет новй элемент в бинарную кучу
+** функция инициализирует очередь с приоритетом
 */
-
-int	ft_insert(t_pqueue	*pqueue, void *content, int priority)
+t_pqueue	*ft_pqueue_init(size_t size)
 {
-	size_t	pos;
+	t_pqueue	*new;
 
-	pos = pqueue->length;
-	pqueue->nodes[pos].content = content;
-	pqueue->nodes[pos].priority = priority;
-	pqueue->length++;
-	ft_ascent(pqueue, pos);
-	return (1);
+	if (!(new = (t_pqueue *)ft_memalloc(sizeof(*new))))
+		return (NULL);
+	if (!(new->nodes = (t_pqueue_node*)ft_memalloc(size * sizeof(t_pqueue_node))))
+		return (NULL);
+	new->size = size;
+	return (new);
 }

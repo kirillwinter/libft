@@ -6,7 +6,7 @@
 #    By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/15 17:32:16 by wballaba          #+#    #+#              #
-#    Updated: 2019/02/28 17:45:29 by wballaba         ###   ########.fr        #
+#    Updated: 2019/03/01 20:41:51 by wballaba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ STR :=	ft_isalnum		ft_isalpha		ft_isascii		ft_isdigit		ft_isprint	\
 		ft_strcount
 
 TREEDIR := ft_tree/
-TREE :=  ft_insert ft_extractmax
+TREE :=  ft_ascent ft_drowning ft_extractmax ft_insert ft_pqueue_init ft_swap_ptr
 
 
 COMPILE := gcc -Wall -Wextra -Werror -g
