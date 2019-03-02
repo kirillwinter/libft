@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ascent.c                                        :+:      :+:    :+:   */
+/*   pq_ascent.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/01 19:42:50 by wballaba          #+#    #+#             */
-/*   Updated: 2019/03/01 20:48:21 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/03/02 15:26:24 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
 /*
 ** функция позволяет всплыть элементу с указанной позиции
 */
-void	ft_ascent(t_pqueue *pqueue, size_t pos)
+
+void	pq_ascent(t_pqueue *pqueue, size_t pos)
 {
-	while (pos > 1)
+	int up_pos;
+
+	while (pos > 0)
 	{
-		if (pqueue->nodes[pos / 2].priority < pqueue->nodes[pos].priority)
+		up_pos = (pos + 1) / 2 - 1;
+		if (pq_compare_priority(pqueue, up_pos, pos))
 		{
-			ft_swap(&pqueue->nodes[pos / 2].priority, &pqueue->nodes[pos].priority);
-			ft_swap_ptr(&pqueue->nodes[pos / 2].content, &pqueue->nodes[pos].content);
-			// ft_swap_ptr(&pqueue->nodes[pos / 2], &pqueue->nodes[pos]);
-			pos /= 2;
+			pq_swap_node(pqueue, up_pos, pos);
+			pos = up_pos;
 		}
 		else
 			break ;

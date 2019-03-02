@@ -6,7 +6,7 @@
 /*   By: wballaba <wballaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 19:08:46 by jwillem-          #+#    #+#             */
-/*   Updated: 2019/03/01 20:50:00 by wballaba         ###   ########.fr       */
+/*   Updated: 2019/03/02 15:34:25 by wballaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-typedef struct 	s_pqueue_node
+typedef struct	s_pqueue_node
 {
-	int		priority;
-	void	*content;
+	int			priority;
+	void		*content;
 }				t_pqueue_node;
 
 typedef struct	s_pqueue
@@ -85,6 +85,7 @@ char			*ft_itoa(int nb);
 double			ft_power(double num, int power);
 int				*ft_range(int min, int max);
 int				ft_sqrt(int nb);
+void			ft_swap_ptr(void **a, void **b);
 void			ft_swap(int *a, int *b);
 char			*ft_uitoa_base(unsigned long long num, int base);
 /*
@@ -144,11 +145,13 @@ int				ft_toupper(int c);
 /*
 ** ft_tree
 */
-void			ft_ascent(t_pqueue	*pqueue, size_t pos);
-void			ft_drowning(t_pqueue *pqueue, size_t pos);
-void			*ft_extractmax(t_pqueue	*pqueue);
-int				ft_insert(t_pqueue	*pqueue, void *content, int priority);
-t_pqueue		*ft_pqueue_init(size_t length);
-void			ft_swap_ptr(void **a, void **b);
+int				pq_compare_priority(t_pqueue *pqueue, size_t a, size_t b);
+int				pq_priority(t_pqueue *pqueue, size_t pos);
+void			pq_ascent(t_pqueue	*pqueue, size_t pos);
+void			pq_drowning(t_pqueue *pqueue, size_t pos);
+void			*pq_extractmax(t_pqueue	*pqueue);
+int				pq_insert(t_pqueue	*pqueue, void *content, int priority);
+t_pqueue		*pq_init(size_t length);
+int				pq_swap_node(t_pqueue *pqueue, size_t a, size_t b);
 
 #endif
